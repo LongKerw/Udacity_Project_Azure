@@ -20,20 +20,20 @@ Advanced - Access tier: Cool
 Network access: Enable public access from all networks (the default)
 Create container named "images". Set its access level to Container.
 From Security + networking > Access keys:
-Blob Storage key: 8vNfUqGqnND0GI1Yujdd17gwURdEyBwVsFfKuiwZJdByu8DEWhHc2R1RYcQFxxUX2vqx72OXiz2
-Blob connection string: DefaultEndpointsProtocol=https;AccountName=images11;AccountKey=8vNfUqGqnND0GI1Yujdd17gwURdEyBwVsFfKuiwZJdByu8DEWhHc2R1RYcQFxxUX2vqx72OXiz2/+AStSydbYA==;EndpointSuffix=core.windows.net
+Blob Storage key: ZUC7xqEJTizN3cWAruDl78GrkTIEbOb1pFjtHDUn2VGNcLyion9b9uWPDhclR1AqNhllnYD+68aF+ASttabtjw==
+
 4. Microsoft Entra ID
 4.1. App Registration
-Name: cmsEntraID
+Name: ssmEntraID
 Who can use? "Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)"
 4.2. Secret Creation
 Secret description: cmsSecret
-Secret Key: 3a51cadc-dc5f-4503-959d-d4286f24d7a4
-Client Secret: wN48Q~SVo5ecjrNs-Fac1wvs9cRVgXVYPxEmjc.r
-Application (client) ID: 1660e7a3-74ae-4945-aea0-5bd962871c33
+Secret Key: 2aef7b5a-eca4-4d3f-a29e-574c714d5646
+Client Secret: jfo8Q~f-xxpeCwqpC2R8mve2IRwU_kxca0V-LaTe
+Application (client) ID: 8b78175e-e4fb-4143-92e7-a66c5cdda205
 
 Application
-Name: udacitycms.azurewebsites.net
+Name: udacitycms12.azurewebsites.net
 Runtime stack: Python 3.10
 Pricing Plan: Free F1
 If you are getting a "Validation failed for a resource" error, pick a different region.
@@ -42,15 +42,15 @@ After creation:
 Settings -> Environment variables - Add the following variables (sample values are included, replace them with your values):
 BLOB_ACCOUNT: ssmimages1
 BLOB_CONTAINER: images
-BLOB_STORAGE_KEY: N1L3GpGK4J+EAkf2Bwu9QJXhS2JQF3mkK3Y1CUE7ah79tTmtUUDFnMKCBrVHSxGXpyw0J6QS2eEt+AStxkseeA==
-BLOB_CONNECTION_STRING: DefaultEndpointsProtocol=https;AccountName=image11;AccountKey=N1L3GpGK4J+EAkf2Bwu9QJXhS2JQF3mkK3Y1CUE7ah79tTmtUUDFnMKCBrVHSxGXpyw0J6QS2eEt+AStxkseeA==;EndpointSuffix=core.windows.net
+BLOB_STORAGE_KEY: ZUC7xqEJTizN3cWAruDl78GrkTIEbOb1pFjtHDUn2VGNcLyion9b9uWPDhclR1AqNhllnYD+68aF+ASttabtjw==
+
 SQL_SERVER: ssmserver1.database.windows.net
 SQL_DATABASE: ssmdb
 SQL_USER_NAME: cmsadmin
 SQL_PASSWORD: CMS4dmin
-CLIENT_SECRET: liK8Q~KDwIGaXpH1UaR-RS3W0Bk8-apIqD32ectH
-SECRET_KEY: ac2df92a-66cf-4f47-875b-f5d027c33934
-CLIENT_ID: 4cec6730-afad-4714-b5bb-9b2c6666eaba
+CLIENT_SECRET: jfo8Q~f-xxpeCwqpC2R8mve2IRwU_kxca0V-LaTe
+SECRET_KEY: 2aef7b5a-eca4-4d3f-a29e-574c714d5646
+CLIENT_ID: 8b78175e-e4fb-4143-92e7-a66c5cdda205
 Deployment Center
 Source: GitHub
 Pick the repo that contains the starter files.
