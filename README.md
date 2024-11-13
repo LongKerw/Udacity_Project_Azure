@@ -1,20 +1,20 @@
 Resource Group
-Resource Group Name: cms
+Resource Group Name: ssm
 2. SQL Database
-DB name: cms
-Server: cms.database.windows.net
-DB region: us-east
+DB name: ssmdb
+Server: ssmserver1.database.windows.net
+DB region: us-central US
 Admin login: cmsadmin
 Admin password: CMS4dmin
-Resource group: cms
+Resource group: ssm
 DB workload env: Development
 DB compute + storage: DTU - Basic
 Press the "Next: Networking" button, then select "Public Endpoint", and set both of the Firewall rules that appear to "Yes".
 Set everything else to default
 Run SQL queries in sql_scripts/ directory after completion, starting from the users table. Don't forget to take screenshots.
 3. Storage Account
-Resource group: cms
-Storage account name: images11 (needs to be unique)
+Resource group: ssm
+Storage account name: ssmimages1 (needs to be unique)
 Advanced - Allow enabling anonymous access on individual containers: Enable
 Advanced - Access tier: Cool
 Network access: Enable public access from all networks (the default)
@@ -40,12 +40,12 @@ If you are getting a "Validation failed for a resource" error, pick a different 
 After creation:
 
 Settings -> Environment variables - Add the following variables (sample values are included, replace them with your values):
-BLOB_ACCOUNT: image11
+BLOB_ACCOUNT: ssmimages1
 BLOB_CONTAINER: images
 BLOB_STORAGE_KEY: N1L3GpGK4J+EAkf2Bwu9QJXhS2JQF3mkK3Y1CUE7ah79tTmtUUDFnMKCBrVHSxGXpyw0J6QS2eEt+AStxkseeA==
 BLOB_CONNECTION_STRING: DefaultEndpointsProtocol=https;AccountName=image11;AccountKey=N1L3GpGK4J+EAkf2Bwu9QJXhS2JQF3mkK3Y1CUE7ah79tTmtUUDFnMKCBrVHSxGXpyw0J6QS2eEt+AStxkseeA==;EndpointSuffix=core.windows.net
-SQL_SERVER: cms.database.windows.net
-SQL_DATABASE: cms
+SQL_SERVER: ssmserver1.database.windows.net
+SQL_DATABASE: ssmdb
 SQL_USER_NAME: cmsadmin
 SQL_PASSWORD: CMS4dmin
 CLIENT_SECRET: liK8Q~KDwIGaXpH1UaR-RS3W0Bk8-apIqD32ectH
